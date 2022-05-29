@@ -5,12 +5,7 @@ setInterval(() => {
     document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
 }, 500);
 
-socket.on("connect", () => {
-    console.log(socket.id);
-});
-
 socket.on("data", dat => {
-    console.log(dat);
     lastUpdate = dat[0];
     document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
     document.getElementById("temp").textContent = `${dat[1]} °C`;
@@ -19,10 +14,6 @@ socket.on("data", dat => {
     document.getElementById("windSpeed").textContent = `${(dat[4] / 3.6).toFixed(1)} m/s`;
     document.getElementById("windDirection").textContent = `${dat[5]}`;
     document.getElementById("rain").textContent = `${dat[6]} mm/hr`;
-});
-
-socket.on("disconnect", () => {
-    console.log(socket.id);
 });
 
 socket.on("error", err => {
