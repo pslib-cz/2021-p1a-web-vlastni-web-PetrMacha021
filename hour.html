@@ -4,24 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Úvodní stránka</title>
+  <title>Grafy</title>
   <link rel="stylesheet" href="styles/main.css">
   <!-- JavaScript -->
   <script src="./scripts/chart.min.js" type="application/javascript"></script>
-  <script src="./scripts/index.js" type="application/javascript"></script>
+  <script src="./scripts/axios.min.js" type="application/javascript"></script>
+  <script src="./scripts/hour.js" type="application/javascript"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/hour.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#">Hodinové grafy</a></li>
+        <li><a href="./index.html">Domov</a></li>
+        <li><a href="#">Denní grafy</a></li>
       </ul>
     </nav>
   </header>
+  <img class="title-img" src="./images/weather.svg" alt="Počasí">
+  <h1 class="title">Denní grafy</h1>
+  <div class="temp"><canvas id="temp"></canvas></div>
 </body>
 </html>

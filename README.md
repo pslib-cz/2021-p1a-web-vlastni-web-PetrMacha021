@@ -13,7 +13,7 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 
 ### HTML, struktura souborů
 
-* [ ] Web má alespoň dvě stránky provázané společnými styly
+* [x] Web má alespoň dvě stránky provázané společnými styly
 * [ ] HTML kód je validní bez chyb ve [validátoru](https://validator.w3.org/)
 * [x] HTML značky dávají smysl, kód obsahuje ``<article>``, ``<section>``, ``<header>``, ``<nav>``.
 * [x] Navigace mezi stránkami je tvořená přes ``<nav><ul><li><a>`` a je funkční i po zkopírování na lokální disk
@@ -35,7 +35,7 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 * [ ] Velikosti mezer kolem prvku jsou odvozeny od velikosti písma elementu
 * [x] Web používá omezenou paletu barev a mezer (lze zajistit přes [proměnné v CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties))
 * [x] Barevné schéma je vkusné a odpovídá tématu. Inspiraci můžete čerpat z [editoru palet](https://coolors.co/palettes/trending)
-* [ ] Šířka hlavního bloku stránky je omezená (tedy používá například ``width``, ``margin``, ``max-width``)
+* [x] Šířka hlavního bloku stránky je omezená (tedy používá například ``width``, ``margin``, ``max-width``)
 * [ ] Web obsahuje obrázek v záhlaví zobrazovaný na celou velikost/výšku obrazovky
 ````    
 .main-header {
@@ -44,7 +44,7 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 }
 ````
 * [ ] Styly definují vzhled prvků podle typografických zvyklosti (velikosti nadpisů, formát odstavců)
-* [ ] Odkazy (například menu) využívají efekt ``hover``
+* [x] Odkazy (například menu) využívají efekt ``hover``
 * [ ] Za nebo před odkazy v textu je přidána ikonka (např. šipka) (využití ``::before`` nebo ``::after``)
 
 ### Vyzkoušejte nad rámec probrané látky
@@ -52,7 +52,7 @@ Editací tohoto souboru a náhradou ``[ ]`` za ``[x]`` můžete evidovat, které
 Po splnění předchozích bodů
 
 * [ ] Na webu je použitý jednoduchý efekt [paralaxního obrázku](https://www.w3schools.com/howto/howto_css_parallax.asp)
-* [ ] Pro layout stránky je použit [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [x] Pro layout stránky je použit [flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [ ] Jsou použity ikonky přes Font Awesome nebo [IcoMoon](https://icomoon.io/)
 * [ ] vytvořte galerii obrázků tvořenou náhledy vedle sebe (``display: flex`` nebo ``inline-block``)
 * [ ] Použijte pozadí přes lineární nebo radiální gradient
