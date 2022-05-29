@@ -1,46 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let temp = new XMLHttpRequest();
-    temp.addEventListener("load", drawTemp);
-    temp.open("GET", "https://meteo.mapetr.cz/hour/temp");
-    temp.send();
+const socket = io("https://meteo.mapetr.cz");
+let lastUpdate = 0;
+
+setInterval(() => {
+    document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
+}, 500);
+
+socket.on("connect", () => {
+    console.log(socket.id);
 });
 
-function drawTemp() {
-    console.log(this.response);
-    const canvas = document.getElementById('temp');
-    const ctx = canvas.getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["bruh", "hrih"],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
+socket.on("data", dat => {
+    console.log(dat);
+    lastUpdate = dat[0];
+    document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
+    document.getElementById("temp").textContent = `${dat[1]} °C`;
+    document.getElementById("pressure").textContent = `${dat[2]} hPa`
+    document.getElementById("humidity").textContent = `${dat[3]} %`;
+    document.getElementById("windSpeed").textContent = `${(dat[4] / 3.6).toFixed(1)} m/s`;
+    document.getElementById("windDirection").textContent = `${dat[5]}`;
+    document.getElementById("rain").textContent = `${dat[6]} mm/hr`;
+});
+
+socket.on("disconnect", () => {
+    console.log(socket.id);
+});
+
+socket.on("error", err => {
+    console.error(err);
+})

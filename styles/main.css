@@ -1,4 +1,54 @@
-html {
-    background: radial-gradient(ellipse at bottom, mediumpurple) no-repeat;
+:root {
+    font-family: 'Open Sans', sans-serif;
     height: 100%;
+    --mountbatten-pink: #9e788fff;
+    --wild-blue-yonder: #a9b3ceff;
+    --middle-blue-green: #7cdedcff;
+    --shadow-blue: #7284a8ff;
+    --dark-liver: #474954ff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--dark-liver);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #333;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format("truetype"),
+         url('../fonts/OpenSans-Regular.woff2') format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.ttf') format("truetype"),
+    url('../fonts/OpenSans-Bold.woff2') format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.ttf') format("truetype"),
+    url('../fonts/OpenSans-Light.woff2') format("woff2");
+    font-weight: 300;
 }

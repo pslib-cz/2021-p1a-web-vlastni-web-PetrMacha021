@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Úvodní stránka</title>
+    <title>Meteostanice</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="./scripts/chart.min.js" type="application/javascript"></script>
+    <!-- JavaScript -->
+    <script src="./scripts/socket.io.min.js"></script>
     <script src="./scripts/index.js" type="application/javascript"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <canvas id="temp" width=500px height=250px />
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./hour.html">Hour Graphs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="weather-div">
+            <img class="icon" src="./images/temp.svg" alt="teplota" />
+            <h2 class="text" id="temp">--- °C</h2>
+        </div>
+        <div class="weather-div">
+            <img class="icon" src="./images/moisture.svg" alt="vlhkost" />
+            <h2 class="text" id="humidity">--- %</h2>
+        </div>
+    </section>
+    <section>
+        <div class="weather-div">
+            <img class="icon" src="./images/pressure.svg" alt="tlak" />
+            <h2 class="text" id="pressure">--- hPa</h2>
+        </div>
+        <div class="weather-div">
+            <img class="icon" src="./images/bucket.svg" alt="déšť" />
+            <h2 class="text" id="rain">--- mm/hr</h2>
+        </div>
+    </section>
+    <section>
+        <div class="weather-div">
+            <img class="icon" src="./images/windspeed.svg" alt="rychlost větru" />
+            <h2 class="text" id="windSpeed">--- m/s</h2>
+        </div>
+        <div class="weather-div">
+            <img class="icon" src="./images/winddir.svg" alt="směr větru" />
+            <h2 class="text" id="windDirection">---</h2>
+        </div>
+    </section>
+    <div class="update"><a id="update">Offline</a></div>
 </body>
 </html>
