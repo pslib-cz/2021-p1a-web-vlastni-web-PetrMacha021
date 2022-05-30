@@ -9,11 +9,11 @@
   <!-- JavaScript -->
   <script src="./scripts/chart.min.js" type="application/javascript"></script>
   <script src="./scripts/axios.min.js" type="application/javascript"></script>
-  <script src="./scripts/hour.js" type="application/javascript"></script>
+  <script src="./scripts/day.js" type="application/javascript"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/hour.css">
+  <link rel="stylesheet" href="./styles/day.css">
 </head>
 <body>
   <header>
@@ -26,6 +26,10 @@
   </header>
   <img class="title-img" src="./images/weather.svg" alt="Počasí">
   <h1 class="title">Denní grafy</h1>
-  <div class="temp"><canvas id="temp"></canvas></div>
+  <article class="graph"><canvas id="temp"></canvas></article>
+  <article class="graph"><canvas id="humidity"></canvas></article>
+  <article class="graph"><canvas id="pressure"></canvas></article>
+  <article class="graph"><canvas id="windS"></canvas></article>
+  <article class="graph"><canvas id="windD"></canvas></article>
 </body>
 </html>

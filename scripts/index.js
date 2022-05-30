@@ -24,12 +24,12 @@ function windConv(str) {
 
 setInterval(() => {
     if (lastUpdate === 0) return;
-    document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
-}, 500);
+    document.getElementById("update").textContent = `Aktualizováno před ${(((new Date().getTime() / 1000)+1) - lastUpdate).toFixed(0)} sekundami`
+}, 750);
 
 socket.on("data", dat => {
     lastUpdate = dat[0];
-    document.getElementById("update").textContent = `Aktualizováno před ${((new Date().getTime() / 1000) - lastUpdate).toFixed(0)} sekundami`
+    document.getElementById("update").textContent = `Aktualizováno před ${(((new Date().getTime() / 1000)+1) - lastUpdate).toFixed(0)} sekundami`
     document.getElementById("temp").textContent = `${dat[1]} °C`;
     document.getElementById("pressure").textContent = `${dat[2]} hPa`
     document.getElementById("humidity").textContent = `${dat[3]} %`;

@@ -10,9 +10,10 @@
     width: 15%;
 }
 
-.temp {
+.graph {
+    height: 16em;
     display: block;
     margin: auto;
-    width: 70%;
+    width: 80%;
     max-width: 960px;
 }
