@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- JavaScript -->
     <script src="./scripts/socket.io.min.js"></script>
-    <script src="./scripts/index.js" type="application/javascript"></script>
+    <script src="./scripts/index.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/main.css">
@@ -23,32 +23,40 @@
             </ul>
         </nav>
     </header>
-    <section class="realtime">
-        <div class="weather-div">
-            <img class="icon" src="./images/temp.svg" alt="teplota" />
-            <h2 class="text" id="temp">--- °C</h2>
-        </div>
-        <div class="weather-div">
-            <img class="icon" src="./images/moisture.svg" alt="vlhkost" />
-            <h2 class="text" id="humidity">--- %</h2>
-        </div>
-        <div class="weather-div">
-            <img class="icon" src="./images/pressure.svg" alt="tlak" />
-            <h2 class="text" id="pressure">--- hPa</h2>
-        </div>
-        <div class="weather-div">
-            <img class="icon" src="./images/bucket.svg" alt="déšť" />
-            <h2 class="text" id="rain">--- mm/hr</h2>
-        </div>
-        <div class="weather-div">
-            <img class="icon" src="./images/windspeed.svg" alt="rychlost větru" />
-            <h2 class="text" id="windSpeed">--- m/s</h2>
-        </div>
-        <div class="weather-div">
-            <img class="icon" src="./images/winddir.svg" alt="směr větru" />
-            <h2 class="text" id="windDirection">---</h2>
-        </div>
-    </section>
-    <div class="update"><a id="update">Offline</a></div>
+    <div class="viewBar">
+        <section class="realtime">
+            <div class="weather-div">
+                <img class="icon" src="./images/temp.svg" alt="teplota" />
+                <h2 class="text" id="temp">--- °C</h2>
+            </div>
+            <div class="weather-div">
+                <img class="icon" src="./images/moisture.svg" alt="vlhkost" />
+                <h2 class="text" id="humidity">--- %</h2>
+            </div>
+            <div class="weather-div">
+                <img class="icon" src="./images/pressure.svg" alt="tlak" />
+                <h2 class="text" id="pressure">--- hPa</h2>
+            </div>
+            <div class="weather-div">
+                <img class="icon" src="./images/bucket.svg" alt="déšť" />
+                <h2 class="text" id="rain">--- mm/hr</h2>
+            </div>
+            <div class="weather-div">
+                <img class="icon" src="./images/windspeed.svg" alt="rychlost větru" />
+                <h2 class="text" id="windSpeed">--- m/s</h2>
+            </div>
+            <div class="weather-div">
+                <img class="icon" src="./images/winddir.svg" alt="směr větru" />
+                <h2 class="text" id="windDirection">---</h2>
+            </div>
+        </section>
+        <div class="update"><a id="update">Offline</a></div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://hadex.cz/t110-vnejsi-mechanicke-dily-k-meteo-wh1080-a-wh1090/">Meteostanice použitá</a></li>
+            <li><a href="./zdroje.html ">Zdroje</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

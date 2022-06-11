@@ -8,6 +8,11 @@
     --dark-liver: #474954ff;
 }
 
+.viewBar {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -51,4 +56,25 @@ li a:hover {
     src: url('../fonts/OpenSans-Light.ttf') format("truetype"),
     url('../fonts/OpenSans-Light.woff2') format("woff2");
     font-weight: 300;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark-liver);
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+}
+
+footer li a::before {
+    content: "•";
+    color: white;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
 }

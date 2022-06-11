@@ -1,3 +1,26 @@
+function degConv(dir) {
+    switch (dir) {
+        case "N":
+            return 0;
+        case "NE":
+            return 45;
+        case "E":
+            return 90;
+        case "SE":
+            return 135;
+        case "S":
+            return 180;
+        case "SW":
+            return 225;
+        case "W":
+            return 270;
+        case "NW":
+            return 315;
+        default:
+            return 0;
+    }
+}
+
 async function temperature() {
     let data = await axios.get("https://meteo.mapetr.cz/hour/temp").catch(err => console.error(err));
     data = data.data;
@@ -92,7 +115,7 @@ async function wind_speed() {
     let time = [];
     for (let i = 0; i < data.length; i++) {
         keysS.unshift(data[i].wind_speed);
-        keysD.unshift(data[i].wind_direction);
+        keysD.unshift(degConv(data[i].wind_direction));
         time.unshift(new Date(data[i].unix * 1000).toLocaleTimeString("cs-cz"));
     }
     new Chart(document.getElementById("windS"), {
@@ -111,7 +134,7 @@ async function wind_speed() {
         }
     });
     new Chart(document.getElementById("windD"), {
-        type: "line",
+        type: "scatter",
         data: {
             labels: time,
             datasets: [{

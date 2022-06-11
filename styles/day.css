@@ -13,7 +13,7 @@
 .graph {
     height: 16em;
     display: block;
-    margin: auto;
+    margin: 4em auto;
     width: 80%;
     max-width: 960px;
 }

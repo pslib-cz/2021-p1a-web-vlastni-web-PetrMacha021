@@ -7,9 +7,9 @@
   <title>Grafy</title>
   <link rel="stylesheet" href="styles/main.css">
   <!-- JavaScript -->
-  <script src="./scripts/chart.min.js" type="application/javascript"></script>
-  <script src="./scripts/axios.min.js" type="application/javascript"></script>
-  <script src="./scripts/day.js" type="application/javascript"></script>
+  <script src="./scripts/chart.min.js"></script>
+  <script src="./scripts/axios.min.js"></script>
+  <script src="./scripts/day.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/main.css">
@@ -24,12 +24,20 @@
       </ul>
     </nav>
   </header>
-  <img class="title-img" src="./images/weather.svg" alt="Počasí">
-  <h1 class="title">Denní grafy</h1>
-  <article class="graph"><canvas id="temp"></canvas></article>
-  <article class="graph"><canvas id="humidity"></canvas></article>
-  <article class="graph"><canvas id="pressure"></canvas></article>
-  <article class="graph"><canvas id="windS"></canvas></article>
-  <article class="graph"><canvas id="windD"></canvas></article>
+  <div class="viewBar">
+    <img class="title-img" src="./images/weather.svg" alt="Počasí">
+    <h1 class="title">Denní grafy</h1>
+    <div class="graph"><canvas id="temp"></canvas></div>
+    <div class="graph"><canvas id="humidity"></canvas></div>
+    <div class="graph"><canvas id="pressure"></canvas></div>
+    <div class="graph"><canvas id="windS"></canvas></div>
+    <div class="graph"><canvas id="windD"></canvas></div>
+  </div>
+  <footer>
+    <ul>
+      <li><a href="https://hadex.cz/t110-vnejsi-mechanicke-dily-k-meteo-wh1080-a-wh1090/">Meteostanice použitá</a></li>
+      <li><a href="./zdroje.html ">Zdroje</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
