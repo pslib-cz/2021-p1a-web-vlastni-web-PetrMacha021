@@ -132,22 +132,26 @@ async function wind_speed() {
         options: {
             maintainAspectRatio: false
         }
-    });
+    });/*
     new Chart(document.getElementById("windD"), {
         type: "scatter",
         data: {
-            labels: time,
             datasets: [{
-                label: "Směr větru (stupně)",
-                backgroundColor: "#9e788fff",
-                borderColor: "#9e788fff",
-                data: keysD
+                label: "Směr větru",
+                data: dataa,
+                backgroundColor: 'rgb(255, 99, 132)'
             }]
         },
         options: {
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    type: "linear",
+                    position: "bottom"
+                }
+            }
         }
-    });
+    });*/
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
